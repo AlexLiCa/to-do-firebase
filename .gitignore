@@ -226,4 +226,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+firebase-key.json
+
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,windows,linux
