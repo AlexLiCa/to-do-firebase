@@ -35,6 +35,8 @@ def update_task(id):
 def delete_task(id):
     tasks_ref.document(id).delete()
 
+def get_completed():
+    completed = tasks_ref.where('check','==', True).get()
 
 
 # create_task(new_task)
