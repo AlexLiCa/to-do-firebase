@@ -3,7 +3,7 @@ import re
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-import datetime
+import datetime, json
 import requests
 
 cred = credentials.Certificate("firebase-key.json")
@@ -67,7 +67,15 @@ def login(mail,password):
     response = requests.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={}'.format(api_key),data=credentials)
     if response.status_code == 200:
         content = response.content
-        llaves = response.json().keys().to_dict()
+        # llaves = response.json()['localId']
+        llaves = response.json()['localId']
+        print(type(llaves))  
+        print(llaves)
+
+      
+   
+
+    
 
     elif response.status_code == 400:
         pass
