@@ -69,8 +69,11 @@ def login(mail,password):
         content = response.content
         # llaves = response.json()['localId']
         llaves = response.json()['localId']
+
         print(type(llaves))  
         print(llaves)
+
+        return llaves
 
       
    
